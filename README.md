@@ -1,12 +1,12 @@
-# HSP-Phagome-ECCMID2024
+# HSP-Phageome-ECCMID2024
 
 ## Bacterial OTU assignment
 
 The Bacterial OTU assignment  has been perfomed in Gaia Software from Sequentia.SL
 
-## Phagome OTU assignment
+## Phageome OTU assignment
 
-The Phagome analysis has been performed using the nextflow available at Shell_analysis.nf in this repository. To perform the analysis install in your linux shell the following program:
+The Phageome analysis has been performed using the nextflow available at Shell_analysis.nf in this repository. To perform the analysis install in your linux shell the following program:
 
 [Nextflow](https://github.com/nextflow-io/nextflow)
 
@@ -19,8 +19,8 @@ The Phagome analysis has been performed using the nextflow available at Shell_an
 ### To run in conda environtment
 
     ##### Create the conda environtment
-    conda env create Phagome_pipeline
-    conda activate Phagome_pipeline
+    conda env create Phageome_pipeline
+    conda activate Phageome_pipeline
     ###### Install all the utils
     conda install -c bioconda nextflow
     conda install -c bioconda bbmap
