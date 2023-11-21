@@ -23,12 +23,10 @@ Gut <- readRDS(file = "Gut_virus.rds")  #Enter directory of a created phytloseq(
 
 Adjformula <- ("Pacient+Age+BMI+Menopause") ##### Formula used on models
 Grup_variable <- "Pacient" #### Name of group variable
-Analysis_name <- "Fecal" ###Group analysis name
 Results_directory <- "" ###### put the results directory
-Normalitzation <- "TMM"
 
 ################
-##Chargue the functions
+##Chargue the functions (All the funcitons on function codes folder)
 ################
 
 for (analysis in list.files(***If running localy, path of working scripts*** , pattern = ".R")) { ####Put the directory whith all functions
@@ -36,6 +34,76 @@ for (analysis in list.files(***If running localy, path of working scripts*** , p
 }
 
 
+################
+##Figure 1A
+################
+
+Analysis_name <- "Vaginal" ###Group analysis name
 
 
+Results_list <- Diferential_function(Vaginal_virus, ### Check the name of your vaginal virus phyloseq
+                                                       Taxonomy = "Species",
+                                                  "bonferroni",
+                                                  Adjformula,
+                                                  Grup_variable,
+                                                  Results_directory)
+
+## Save the plot
+#ggsave(plot = Results_list[[2]],paste0(Results_directory,"/",Analysis_name,"Virus.png"), width = 20, height = 20, units = "cm")
+
+################
+##Figure 1B
+################
+Analysis_name <- "Vaginal" ###Group analysis name
+
+
+Results_list <- Diferential_function(Vaginal, ### Check the name of your vaginal phyloseq
+                                                           Taxonomy ="Genus",
+                                                           "bonferroni",
+                                                           Adjformula,
+                                                           Grup_variable,
+                                                           Results_directory)
+
+
+## Save the plot
+#ggsave(plot = Species[[2]],paste0(Results_directory,"/",Analysis_name,"Bacterial_genus.png"), width = 20, height = 20, units = "cm")
+
+
+
+
+
+################
+##Figure 2A
+################
+  
+  Analysis_name <- "Fecal" ###Group analysis name
+  
+  
+    Results_list <- Diferential_function(Gut_virus, ### Check the name of your fecal virus phyloseq
+                                                     Taxonomy = "Species",
+                                                    "BH",
+                                                    Adjformula,
+                                                    Grup_variable,
+                                                    Results_directory)
+  
+  
+  ## Save the plot
+  #ggsave(plot = Results_list[[2]],paste0(Results_directory,"/",Analysis_name,"Virus.png"), width = 20, height = 20, units = "cm")
+
+
+################
+##Figure 2B
+################
+
+  
+  Results_list <- Diferential_function(Gut, ### Check the name of your fecal virus phyloseq
+                                                           Taxonomy = "Genus",
+                                                           "bonferroni",
+                                                           Adjformula,
+                                                           Grup_variable,
+                                                           Results_directory)
+
+
+## Save the plot
+#ggsave(plot = Results_list[[2]],paste0(Results_directory,"/",Analysis_name,"Bacterial.png"), width = 20, height = 20, units = "cm")
 
