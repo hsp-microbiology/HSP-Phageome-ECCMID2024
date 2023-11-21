@@ -29,8 +29,9 @@ The Phageome analysis has been performed using the nextflow available at Shell_a
 
 ### Database needed
 
-Human genome (GRch38):
-Virus Catalog database:
+[Human genome (GRch38)](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.26/)
+
+[Virus Catalog database](https://www.nature.com/articles/s41564-021-00928-6)
 
 ## Statistical Analysis
 
