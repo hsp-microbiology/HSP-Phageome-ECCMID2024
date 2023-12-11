@@ -36,3 +36,8 @@ The Phageome analysis has been performed using the nextflow available at Shell_a
 ## Statistical Analysis
 
 All the estatistical analysis it is available at Viral_Analisis.R
+
+
+> .[!IMPORTANT]
+> Check all the packages in Functions are updated.
+
